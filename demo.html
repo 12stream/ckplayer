@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="ckplayer.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="videoPlay"></div>
+</body>
+<script>
+var flashvars = {
+            "c": 0, //不加载文本配置
+            "p": 1, //页面加载完成后直接播放视频
+            "k": "5|10|18|20|25", //提示点时间列表
+            "n": "提示点5|提示点10|提示点18|提示点20|提示点25", //提示点文字列表
+            "f": "video_test.flv"
+            //"f": "http://movie.ks.js.cn/flv/other/1_0.flv" //视频地址
+        };
+        var params = {
+            "bgcolor": "#fff",
+            "wmode": "transparent",
+            "allowFullScreen": true,
+            "allowScriptAccess": "always"
+        };
+        CKobject.embedSWF("ckplayer.swf", "videoPlay", "ckplayer_a1", "600", "338", flashvars, params);
+</script>
+</html>
